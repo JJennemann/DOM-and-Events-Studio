@@ -22,12 +22,12 @@ let leftPosition=250;
 
 
 takeOff.addEventListener("click", function(event) {
-    let response = window.confirm("Confirm that the shuttle is ready for takeoff.");
-    if(response){
+    let shouldTakeoff = window.confirm("Confirm that the shuttle is ready for takeoff.");
+    if(shouldTakeoff){
         flightStatus.innerHTML="Shuttle in flight.";
         shuttleBackground.style.backgroundColor = 'blue';
         height=10000;
-        rocketPosition.style.top="240px";
+        // rocketPosition.style.top="240px";
         shuttleHeight.innerHTML=height;
     };
 });
@@ -43,8 +43,8 @@ land.addEventListener("click", function(event){
 });
 
 abort.addEventListener("click", function(event){
-    let response = window.confirm("Confirm that you want to abort the mission");
-    if(response){
+    let shouldAbort = window.confirm("Confirm that you want to abort the mission");
+    if(shouldAbort){
         flightStatus.innerHTML="Mission aborted.";
         shuttleBackground.style.backgroundColor='green';
         height=0;
@@ -97,4 +97,4 @@ leftClick.addEventListener("click", function(event){
     };
 });
 
-})
+});
